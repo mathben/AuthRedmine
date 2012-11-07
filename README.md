@@ -17,7 +17,8 @@ git clone https://github.com/mathben/AuthRedmine.git
 
 Adapt the following line in the file AuthRedmine.php
 ```php
-private $emailServer "changeme.com";
+	private $emailServer = "changeme.com";
+	private $hostname = "127.0.0.1";
 ```
 
 Add the include in the LocalSettings.php

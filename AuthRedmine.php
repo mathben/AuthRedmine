@@ -22,10 +22,12 @@ $wgExtensionCredits['parserhook'][] = array (
 );
  
 require_once ( 'includes/AuthPlugin.php' );
-class ExtAuth extends AuthPlugin
+class AuthRedmine extends AuthPlugin
 {
   
-	private $emailServer "changeme.com";
+	private $emailServer = "changeme.com";
+	private $hostname = "127.0.0.1";
+	
 
     /**
      * Check whether there exists a user account with the given name.
@@ -58,8 +60,7 @@ class ExtAuth extends AuthPlugin
     	// create a new cURL resource
 		$ch = curl_init();
 	
-		$hostname = "127.0.0.1";
-		$link = "http://$username:$password@$hostname/redmine/news.json";
+		$link = "http://$username:$password@$this->hostname/redmine/news.json";
 
 		//echo $link;
 	
@@ -185,7 +186,7 @@ class ExtAuth extends AuthPlugin
      */
     function updateExternalDB( $user ) {
         $user->setRealName($user);
-        $user->setEmail("$user@sonia.etsmtl.ca");
+        $user->setEmail("$user@$this->emailServer");
         $user->mEmailAuthenticated = wfTimestampNow();
         $user->saveSettings();
         return true;

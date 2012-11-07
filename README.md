@@ -1,7 +1,9 @@
 AuthRedmine
 ===========
+@date : 7 november 2012
+@author : Mathieu Benoit
 
-Plugin of mediawiki to authenficate user on redmine system with api REST
+Plugin of mediawiki to authenficate user on redmine system with api REST.
 
 INSTALLATION
 ============
@@ -16,7 +18,6 @@ git clone https://github.com/mathben/AuthRedmine.git
 #authentification with redmine
 require_once("$IP/extensions/AuthRedmine/AuthRedmine.php");
 $wgAuth = new AuthRedmine();
-
 
 TODO
 ============

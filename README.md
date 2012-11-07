@@ -15,7 +15,10 @@ cd $repOfMediaWiki/extensions
 git clone https://github.com/mathben/AuthRedmine.git
 ```
 
-Change private $emailServer "changeme.com"; in the file AuthRedmine.php
+Adapt the following line in the file AuthRedmine.php
+```php
+private $emailServer "changeme.com";
+```
 
 Add the include in the LocalSettings.php
 

@@ -1,6 +1,7 @@
 AuthRedmine
 ===========
-@date : 7 november 2012
+@date : november 2012
+
 @author : Mathieu Benoit
 
 Plugin of mediawiki to authenficate user on redmine system with api REST.
@@ -29,6 +30,10 @@ require_once("$IP/extensions/AuthRedmine/AuthRedmine.php");
 $wgAuth = new AuthRedmine();
 ```
 
+Contributing
+------------
+[Pull requests][] are welcome.
+
 SYSTEM PREREQUISITES
 --------------------
 You need to active the api REST in redmine in administrator tools on the web page.
@@ -39,7 +44,8 @@ TODO
 
 Licence
 -------
-lpgl3
+The AuthRedmine is released under [Lpgl3 License][]
 
-http://www.gnu.org/copyleft/lesser.html
+[Lpgl3 License]: http://www.gnu.org/copyleft/lesser.html
+[Pull requests]: http://help.github.com/send-pull-requests
 

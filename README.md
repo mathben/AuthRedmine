@@ -13,7 +13,7 @@ Add the code in the extensions repertory
 repOfMediaWiki=/var/www/mediawiki/
 cd $repOfMediaWiki/extensions
 git clone https://github.com/mathben/AuthRedmine.git
-``̀
+```
 
 Change private $emailServer "changeme.com"; in the file AuthRedmine.php
 
@@ -36,5 +36,6 @@ TODO
 Licence
 -------
 lpgl3
+
 http://www.gnu.org/copyleft/lesser.html
 
